@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cálculo de Crédito"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginBottom="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblCapital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capital"/>
+
+        <EditText
+            android:id="@+id/txtCapital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCapital"
+            />
+
+        <TextView
+            android:id="@+id/lblCuotas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCapital"
+            android:text="Cuotas"/>
+
+        <EditText
+            android:id="@+id/txtCuotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCuotas"
+            />
+
+        <TextView
+            android:id="@+id/lblTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCuotas"
+            android:text="TEA/TCEA"/>
+
+        <EditText
+            android:id="@+id/txtTea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblTea"
+            />
+
+        <TextView
+            android:id="@+id/lblTem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTea"
+            android:text="TEM"/>
+
+        <EditText
+            android:id="@+id/txtTem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblTem"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular">
+
+    </Button>
+
+
+
+
+
+</LinearLayout>
