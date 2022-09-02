@@ -37,111 +37,133 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:background="@color/blue_credi"
         >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtCapital"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/lbl1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:hint="Capital">
+            android:text="Capital"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:inputType="numberDecimal"
-                android:background="@color/white"
-                />
+        <EditText
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/txt2"
+            android:background="@drawable/border_round"
+            android:drawableStart="@drawable/ic_dollar"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="10,500.00" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtCuotas"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/lbl2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:hint="Cuotas">
+            android:layout_alignStart="@id/txt2"
+            android:text="Cuotas"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:inputType="number"
-                android:background="@color/white"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtTea"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/txt2"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/lbl1"
+            android:layout_alignParentRight="true"
             android:layout_marginBottom="5dp"
-            android:hint="TEA/TCEA">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:inputType="numberDecimal"
-                android:background="@color/white"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtTem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="TEM">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:inputType="numberDecimal"
-                android:background="@color/white"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:background="@drawable/border_round"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="24" />
 
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <LinearLayout
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:background="@color/blue_credi"
         >
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Calcular"
+        <TextView
+            android:id="@+id/lbl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="TEA/TCEA"
+            android:textColor="@color/white" />
 
-            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-            android:backgroundTint="@color/green_button"
-            android:textColor="@color/white"
-            />
+        <EditText
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/txt4"
+            android:background="@drawable/border_round"
+            android:drawableEnd="%"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="10,500.00" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/lbl4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignStart="@id/txt4"
+            android:text="Cuotas"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/txt4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl4"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_round"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:text="24" />
 
 
 
-
-
+    </RelativeLayout>
 
 </LinearLayout>
