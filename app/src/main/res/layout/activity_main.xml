@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="@android:color/background_dark">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -37,8 +36,6 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,35 +53,37 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/txt1"
+            android:id="@+id/txtCapital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl1"
             android:layout_alignParentLeft="true"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="5dp"
-            android:layout_toLeftOf="@id/txt2"
+            android:layout_toLeftOf="@id/txtCuotas"
             android:background="@drawable/border_round"
             android:drawableStart="@drawable/ic_dollar"
             android:gravity="right"
+            android:hint="0.00"
             android:inputType="numberDecimal"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
             android:paddingBottom="8dp"
-            android:text="10,500.00" />
+            android:nextFocusDown="@id/txtCuotas"
+            />
 
         <TextView
             android:id="@+id/lbl2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_alignStart="@id/txt2"
+            android:layout_alignStart="@id/txtCuotas"
             android:text="Cuotas"
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/txt2"
+            android:id="@+id/txtCuotas"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl1"
@@ -92,12 +91,14 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/border_round"
             android:gravity="right"
-            android:inputType="numberDecimal"
+            android:hint="1"
+            android:inputType="number"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
             android:paddingBottom="8dp"
-            android:text="24" />
+            android:nextFocusDown="@id/txtTcea"
+            />
 
 
 
@@ -107,6 +108,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
+        android:paddingBottom="10dp"
         android:background="@color/blue_credi"
         >
 
@@ -119,51 +121,246 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/txt3"
+            android:id="@+id/txtTcea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl3"
             android:layout_alignParentLeft="true"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="5dp"
-            android:layout_toLeftOf="@id/txt4"
+            android:layout_toLeftOf="@id/txtTem"
             android:background="@drawable/border_round"
-            android:drawableEnd="%"
+            android:drawableEnd="@drawable/ic_prc_icon"
+            android:drawablePadding="5dp"
             android:gravity="right"
             android:inputType="numberDecimal"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
             android:paddingBottom="8dp"
-            android:text="10,500.00" />
+            android:hint="0.00" />
 
         <TextView
             android:id="@+id/lbl4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@id/txtTem"
             android:layout_marginBottom="5dp"
-            android:layout_alignStart="@id/txt4"
-            android:text="Cuotas"
+            android:text="TEM"
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/txt4"
-            android:layout_width="140dp"
+            android:id="@+id/txtTem"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl4"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="5dp"
             android:background="@drawable/border_round"
+            android:drawableEnd="@drawable/ic_prc_icon"
+            android:drawablePadding="5dp"
+            android:enabled="false"
             android:gravity="right"
             android:inputType="numberDecimal"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
             android:paddingBottom="8dp"
-            android:text="24" />
+            android:hint="0.00" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/txtTem"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/green_button"
+            android:text="Calcular"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/lbl5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Monto Cuota"/>
+
+        <EditText
+            android:id="@+id/txtRCuota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl5"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_round_gray"
+            android:drawableStart="@drawable/ic_dollar"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:hint="0.00" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:id="@+id/lbl6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Monto sin intereses" />
+
+        <EditText
+            android:id="@+id/txtRCuotaSin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl6"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/txtRCuotaInt"
+            android:background="@drawable/border_round_gray"
+            android:drawableStart="@drawable/ic_dollar"
+            android:drawablePadding="5dp"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:hint="0.00" />
+
+        <TextView
+            android:id="@+id/lbl7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/txtRCuotaInt"
+            android:layout_marginBottom="5dp"
+            android:text="Interes cuota"/>
+
+        <EditText
+            android:id="@+id/txtRCuotaInt"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl7"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_round_gray"
+            android:drawableStart="@drawable/ic_dollar"
+            android:drawablePadding="5dp"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:hint="0.00" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <TextView
+            android:id="@+id/lbl8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Interes total"/>
+
+        <EditText
+            android:id="@+id/txtRInteres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl8"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_round_gray"
+            android:drawableStart="@drawable/ic_dollar"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:hint="0.00" />
+
+        <TextView
+            android:id="@+id/lbl9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRInteres"
+            android:layout_marginBottom="5dp"
+            android:text="Monto total a pagar" />
+
+        <EditText
+            android:id="@+id/txtRMontoPagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl9"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/border_round_gray"
+            android:drawableStart="@drawable/ic_dollar"
+            android:gravity="right"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:hint="0.00"/>
 
 
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toLeftOf="@id/btnCopiar"
+            android:backgroundTint="@color/red_button"
+            android:text="Limpiar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnCopiar"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/yellow_button"
+            android:text="Copiar" />
+
+    </RelativeLayout>
+
+
 
 </LinearLayout>

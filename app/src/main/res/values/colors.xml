@@ -12,5 +12,8 @@
     <color name="blue_variant">#05249E</color>
     <color name="blue_second">#508ED4</color>
     <color name="green_button">#198754</color>
-
+    <color name="red_button">#BB2D3B</color>
+    <color name="yellow_button">#FFD75F</color>
+    <color name="gray_disabled">#E9ECEF</color>
+    <color name="gray_border">#CED4DA</color>
 </resources>
