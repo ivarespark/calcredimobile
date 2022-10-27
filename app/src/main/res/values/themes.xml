@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Calcredi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Calcredi" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue_credi</item>
-        <item name="colorPrimaryVariant">@color/blue_variant</item>
+        <item name="colorPrimaryVariant">@color/blue_credi</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blue_second</item>
@@ -13,5 +13,4 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
 </resources>

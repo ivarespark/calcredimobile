@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 210 210"
+   version="1.1"
+   id="svg912"
+   sodipodi:docname="kalcredi_logosolo.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview914"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.17637989"
+     inkscape:cx="-600.97555"
+     inkscape:cy="515.93184"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs909">
+    <rect
+       x="96.38287"
+       y="150.24389"
+       width="598.14075"
+       height="538.61016"
+       id="rect1091" />
+    <color-profile
+       name="sRGB-IEC61966-2.1"
+       xlink:href="../../Windows/system32/spool/drivers/color/sRGB%20Color%20Space%20Profile.icm"
+       id="color-profile1629" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect1487"
+       style="fill:#f9f9f9;stroke-width:0.59645;stroke-linecap:round;stroke-linejoin:round"
+       d="m 0,0 v 210 h 146.03656 c 7.33182,-4.10032 12.26851,-11.91177 12.26851,-20.91834 V 20.171176 C 158.30507,11.68431 153.92038,4.2598836 147.28042,0 Z" />
+    <path
+       id="rect1410"
+       style="fill:#0b45f6;stroke-width:0.595388;stroke-linecap:round;stroke-linejoin:round"
+       d="M 131.03623,0 44.065835,86.970399 c -9.393929,9.393929 -9.393928,24.519061 -10e-7,33.912991 L 133.18244,210 h 76.22597 l -1e-5,-210 z" />
+    <path
+       id="rect1412"
+       style="fill:#0b45c3;stroke-width:0.595388;stroke-linecap:round;stroke-linejoin:round"
+       d="M 180.25223,0 93.281834,86.970394 c -9.393928,9.393929 -9.393927,24.519066 6e-6,33.912996 L 182.39845,210 H 210 l -1e-5,-210 z" />
+    <path
+       id="rect1414"
+       style="fill:#f9f9f9;stroke-width:0.597514;stroke-linecap:round;stroke-linejoin:round"
+       d="m 210,26.924455 -60.35601,60.35652 c -9.42747,9.427474 -9.42747,24.606625 1e-5,34.034105 L 210,181.6716 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Capa 2"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <g
+       id="use67"
+       transform="matrix(0.20517869,0,0,0.20517869,-0.05148928,-0.05148928)">
+      <title
+         id="title5095">App Icon Guides</title>
+      <g
+         id="g5131">
+        <title
+           id="title5097">App Icon Guides</title>
+        <path
+           style="fill:none;stroke:#919191;stroke-width:3px"
+           d="m 0,739.001 v -454 C 0,135.001 112,0 284.999,0 H 739.001 C 912,0 1024,135.001 1024,285.001 v 454 C 1024,889.001 912,1024 739.001,1024 H 284.999 C 112,1024 0,889.001 0,739.001 Z"
+           id="path5101">
+          <title
+             id="title5099">Outer Bounding Box</title>
+        </path>
+        <path
+           style="fill:none;stroke:#919191;stroke-width:3px"
+           d="m 50,739.001 v -454 C 50,162 140,50 284.999,50 H 739.001 C 884.001,50 974,162 974,285.001 v 454 C 974,862 884.001,974 739.001,974 H 284.999 C 140,974 50,862 50,739.001 Z"
+           id="path5105">
+          <title
+             id="title5103">Inner Bounding Box</title>
+        </path>
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:3px"
+           d="m 100,724.005 v -424 C 100,185.006 170,100 300.026,100.005 L 724,100 c 130,0.005 200,85.006 200,200.005 v 424 c 0,115.001 -70,199.995 -200,200 H 300.026 C 170,924.005 100,839.006 100,724.005 Z"
+           id="path5109">
+          <title
+             id="title5107">Icon Grid Bounding Box</title>
+        </path>
+        <path
+           style="fill:none;stroke:#ff0000"
+           d="M 154.017,870.001 H 870.001 V 154.014 H 154.017 Z m 0,0 715.984,-715.987 z M 100,511.995 h 824 z m 0,157.365 H 924 Z M 924,354.631 H 100 Z M 669.365,99.995 v 824 z m -314.73,824 v -824 z M 512,99.995 v 824 z m -357.983,54.019 715.984,715.987 z"
+           id="path5113">
+          <title
+             id="title5111">Icon Grid</title>
+        </path>
+        <circle
+           style="fill:none"
+           cx="512"
+           cy="511.995"
+           r="157.397"
+           id="circle5117">
+          <title
+             id="title5115">Grid Circle 1</title>
+        </circle>
+        <circle
+           style="fill:none"
+           cx="512"
+           cy="511.995"
+           r="222.577"
+           id="circle5121">
+          <title
+             id="title5119">Grid Circle 2</title>
+        </circle>
+        <circle
+           style="fill:none"
+           cx="512"
+           cy="511.995"
+           r="358.00101"
+           id="circle5125">
+          <title
+             id="title5123">Grid Circle 3</title>
+        </circle>
+        <path
+           d="m 1084.343,548.001 h -941 c -28.719,0 -52,-23.281 -52,-52 0,-28.719 23.281,-52 52,-52 h 941 c 28.719,0 52,23.281 52,52 0,28.719 -23.281,52 -52,52 z m 51.957,-51.962 -1045,-0.078"
+           style="stroke:#0077ff;stroke-width:5px;stroke-dasharray:24, 10"
+           transform="rotate(-64.504252,613.82146,496.00118)"
+           id="path5129">
+          <title
+             id="title5127">Tool Angle</title>
+        </path>
+      </g>
+    </g>
+  </g>
+</svg>

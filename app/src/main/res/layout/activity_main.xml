@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="18dp"
+        android:paddingTop="18dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:background="@color/blue_credi"
@@ -29,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cálculo de Crédito"
+            android:text="Kalcredi"
             style="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/white"
             />
@@ -39,8 +40,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         android:background="@color/blue_credi"
         >
 
@@ -66,12 +67,11 @@
             android:gravity="right"
             android:hint="0.00"
             android:inputType="numberDecimal"
+            android:nextFocusDown="@id/txtCuotas"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
-            android:paddingBottom="8dp"
-            android:nextFocusDown="@id/txtCuotas"
-            />
+            android:paddingBottom="8dp" />
 
         <TextView
             android:id="@+id/lbl2"
@@ -106,10 +106,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:background="@color/blue_credi"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="18dp"
+        android:background="@drawable/border_round_blue"
         >
 
         <TextView
@@ -183,8 +183,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         android:layout_marginTop="10dp"
         >
 
@@ -193,7 +193,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="Monto Cuota"/>
+            android:text="Monto Cuota"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/txtRCuota"
@@ -205,18 +206,18 @@
             android:background="@drawable/border_round_gray"
             android:drawableStart="@drawable/ic_dollar"
             android:gravity="right"
+            android:hint="0.00"
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:paddingRight="15dp"
-            android:paddingBottom="8dp"
-            android:hint="0.00" />
+            android:paddingBottom="8dp" />
 
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         >
 
         <TextView
@@ -224,7 +225,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="Monto sin intereses" />
+            android:text="Monto sin intereses"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/txtRCuotaSin"
@@ -251,7 +253,8 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@id/txtRCuotaInt"
             android:layout_marginBottom="5dp"
-            android:text="Interes cuota"/>
+            android:text="Interes cuota"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/txtRCuotaInt"
@@ -275,8 +278,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         >
 
         <TextView
@@ -284,7 +287,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="Interes total"/>
+            android:text="Interes total"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/txtRInteres"
@@ -308,7 +312,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtRInteres"
             android:layout_marginBottom="5dp"
-            android:text="Monto total a pagar" />
+            android:text="Monto total a pagar"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/txtRMontoPagar"
@@ -333,8 +338,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         >
 
         <Button
@@ -358,6 +363,7 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/yellow_button"
             android:text="Copiar"
+            android:visibility="gone"
 
 
             />
