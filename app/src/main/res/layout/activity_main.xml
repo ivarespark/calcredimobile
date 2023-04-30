@@ -348,22 +348,21 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toLeftOf="@id/btnCopiar"
+            android:layout_toLeftOf="@id/btnCompartir"
             android:backgroundTint="@color/red_button"
             android:text="Limpiar"
+            android:layout_marginRight="8dp"
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btnCopiar"
+            android:id="@+id/btnCompartir"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="170dp"
             android:layout_height="60dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/yellow_button"
-            android:text="Copiar"
-            android:visibility="gone"
+            android:text="Compartir"
 
 
             />

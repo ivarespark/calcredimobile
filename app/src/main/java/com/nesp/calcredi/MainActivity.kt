@@ -50,33 +50,43 @@ class MainActivity : AppCompatActivity() {
                 limpiarDatos()
             }
 
-            btnCopiar.setOnClickListener{
-                copiarInfo(armarInfo())
+            btnCompartir.setOnClickListener{
+                compartir()
             }
         }
     }
 
     private fun armarInfo() : String {
-        var cInfo:String = ""
-        cInfo += "CalcrediMobile\r\n"
-        cInfo += "Capital: $ " + dfm.format(capital).toString() + "\r\n"
-        cInfo += "Cuotas: " + cuotas + "\r\n"
-        cInfo += "TCEA/TEA: " + df.format(tcea).toString() + " %\r\n"
-        cInfo += "TEM: " + df.format(tem * 100).toString() + " %\r\n"
-        cInfo += "Monto cuota: $ " + dfm.format(cuota).toString() + "\r\n"
-        cInfo += "Cuota sin interes: $ " + dfm.format(cuotaSin).toString() + "\r\n"
-        cInfo += "Interes cuota: $ " + dfm.format(cuotaInt).toString() + "\r\n"
-        cInfo += "Interes total: $ " + dfm.format(interes).toString() + "\r\n"
-        cInfo += "Monto total a pagar: $ " + dfm.format(montoPagar).toString() + "\r\n"
-        print(cInfo)
+        var cInfo = ""
+        cInfo += "Kalcredi 1.0" + "\r\n"
+        cInfo += "--------------------" + "\n"
+        cInfo += "Capital: $ " + dfm.format(capital).toString() + "\n"
+        cInfo += "Cuotas: " + cuotas + "\n"
+        cInfo += "TCEA/TEA: " + df.format(tcea).toString() + " %\n"
+        cInfo += "TEM: " + df.format(tem * 100).toString() + " %\n"
+        cInfo += "Monto cuota: $ " + dfm.format(cuota).toString() + "\n"
+        cInfo += "Cuota sin interes: $ " + dfm.format(cuotaSin).toString() + "\n"
+        cInfo += "Interes cuota: $ " + dfm.format(cuotaInt).toString() + "\n"
+        cInfo += "Interes total: $ " + dfm.format(interes).toString() + "\n"
+        cInfo += "Monto total a pagar: $ " + dfm.format(montoPagar).toString()
         return cInfo
     }
 
-    private fun copiarInfo(vararg cinfo:String) {
-        val clip = ClipData.newPlainText(null, cinfo.toString())
-        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
-        clipboard.setPrimaryClip(clip)
-        Toast.makeText(this,"Copiado al portapapeles",Toast.LENGTH_LONG).show()
+    private fun compartir() {
+        var cInfo = ""
+        if (cuota > 0){
+            cInfo = armarInfo()
+            val intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT,cInfo)
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TITLE, "Compartir datos del cr�dito")
+            }
+            val sharedIntent = Intent.createChooser(intent,null)
+            startActivity(sharedIntent)
+        }else{
+            Toast.makeText(this,"Primero debe calcular",Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun ocultarTeclado() {
@@ -96,7 +106,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun limpiarDatos() {
+    private fun
+            limpiarDatos() {
         with(binding){
             txtCapital.setText("")
             txtTcea.setText("")
@@ -134,10 +145,10 @@ class MainActivity : AppCompatActivity() {
         cuota = capital * ((tem * (1 + tem).pow(cuotas.toDouble()))/((1 + tem).pow(cuotas.toDouble()) - 1))
         binding.txtRCuota.setText(dfm.format(cuota).toString())
 
-        cuotaSin = capital / cuotas;
+        cuotaSin = capital / cuotas
         binding.txtRCuotaSin.setText(dfm.format(cuotaSin).toString())
 
-        cuotaInt = cuota - cuotaSin;
+        cuotaInt = cuota - cuotaSin
         binding.txtRCuotaInt.setText(dfm.format(cuotaInt).toString())
 
         montoPagar = cuotas * cuota
