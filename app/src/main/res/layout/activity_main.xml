@@ -1,47 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     >
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="18dp"
-        android:paddingTop="18dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
         android:background="@color/blue_credi"
         >
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_calc"
-            android:layout_marginEnd="5dp"
-            app:tint="@color/white" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Kalcredi"
-            style="@style/TextAppearance.AppCompat.Title"
             android:textColor="@color/white"
-            />
+            style="@style/TextAppearance.AppCompat.Title">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        </TextView>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
+        android:paddingTop="12dp"
         android:background="@color/blue_credi"
         >
 
@@ -368,7 +361,5 @@
             />
 
     </RelativeLayout>
-
-
-
 </LinearLayout>
+</ScrollView>

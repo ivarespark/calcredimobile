@@ -56,6 +56,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun validarCampos() : Boolean {
+        var retorno : Boolean = true
+        cargarDatos()
+        if (capital == 0.0) retorno = false
+        if (tcea == 0.0) retorno = false
+        if (cuotas == 0) retorno = false
+        return retorno
+    }
+
     private fun armarInfo() : String {
         var cInfo = ""
         cInfo += "Kalcredi 1.0" + "\r\n"
@@ -85,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             val sharedIntent = Intent.createChooser(intent,null)
             startActivity(sharedIntent)
         }else{
-            Toast.makeText(this,"Primero debe calcular",Toast.LENGTH_LONG).show()
+            mostrarMensaje("Primero debe calcular")
         }
     }
 
@@ -106,8 +115,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun
-            limpiarDatos() {
+    private fun mostrarMensaje(msg : String){
+        Toast.makeText(applicationContext,msg,Toast.LENGTH_SHORT).show()
+    }
+
+    private fun cargarDatos(){
+        try {
+            with(binding){
+                capital = if (!txtCapital.text.toString().equals("")) txtCapital.text.toString().toDouble() else 0.0
+                tcea = if (!txtTcea.text.toString().equals("")) txtTcea.text.toString().toDouble() else 0.0
+                cuotas = if (!txtCuotas.text.toString().equals("")) txtCuotas.text.toString().toInt() else 0
+            }
+        } catch (e : Exception){
+            mostrarMensaje("Error cargando datos: " + e.message.toString())
+        }
+
+    }
+
+    private fun limpiarDatos() {
         with(binding){
             txtCapital.setText("")
             txtTcea.setText("")
@@ -132,32 +157,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calcularCredito() {
-        with(binding){
-            capital = txtCapital.text.toString().toDouble()
-            tcea = txtTcea.text.toString().toDouble()
-            cuotas = txtCuotas.text.toString().toInt()
+        try {
+            if (!validarCampos()) throw ValidacionException("Debe completar todos los datos para calcular")
+            cargarDatos();
+            tem = ((1 + (tcea / 100.00)).pow(1.00 / 12.00)) - 1
+            df.roundingMode = RoundingMode.UP
+            dfm.roundingMode = RoundingMode.UP
+            binding.txtTem.setText(df.format(tem * 100).toString())
+
+            cuota = capital * ((tem * (1 + tem).pow(cuotas.toDouble())) / ((1 + tem).pow(cuotas.toDouble()) - 1))
+            binding.txtRCuota.setText(dfm.format(cuota).toString())
+
+            cuotaSin = capital / cuotas
+            binding.txtRCuotaSin.setText(dfm.format(cuotaSin).toString())
+
+            cuotaInt = cuota - cuotaSin
+            binding.txtRCuotaInt.setText(dfm.format(cuotaInt).toString())
+
+            montoPagar = cuotas * cuota
+            binding.txtRMontoPagar.setText(dfm.format(montoPagar).toString())
+
+            interes = montoPagar - capital
+            binding.txtRInteres.setText(dfm.format(interes).toString())
+        } catch (e: ValidacionException){
+            mostrarMensaje(e.message.toString())
+        } catch (e: Exception){
+            mostrarMensaje("Error no controlado: " + e.message.toString())
         }
-        tem = ((1 + (tcea / 100.00)).pow(1.00 / 12.00)) -1
-        df.roundingMode = RoundingMode.UP
-        dfm.roundingMode = RoundingMode.UP
-        binding.txtTem.setText(df.format(tem * 100).toString())
-
-        cuota = capital * ((tem * (1 + tem).pow(cuotas.toDouble()))/((1 + tem).pow(cuotas.toDouble()) - 1))
-        binding.txtRCuota.setText(dfm.format(cuota).toString())
-
-        cuotaSin = capital / cuotas
-        binding.txtRCuotaSin.setText(dfm.format(cuotaSin).toString())
-
-        cuotaInt = cuota - cuotaSin
-        binding.txtRCuotaInt.setText(dfm.format(cuotaInt).toString())
-
-        montoPagar = cuotas * cuota
-        binding.txtRMontoPagar.setText(dfm.format(montoPagar).toString())
-
-        interes = montoPagar - capital
-        binding.txtRInteres.setText(dfm.format(interes).toString())
-
     }
-
-
 }
